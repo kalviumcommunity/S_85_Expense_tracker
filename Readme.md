@@ -1,7 +1,7 @@
 Project Title:
 Expense Tracker App
-
-Project Overview:
+  
+Project Overview: 
 The Expense Tracker App helps users monitor their finances by tracking daily, weekly, and monthly expenses. It’s designed to be user-friendly, allowing users to add, categorize, and view expenses easily. The app also provides analytics with charts to help users analyze their spending habits, set and manage a monthly budget, and work toward saving money.
 
 Major Features:
