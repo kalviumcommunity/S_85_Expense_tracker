@@ -7,7 +7,7 @@ app.use(express.json());
 
 // Basic /ping route
 app.get('/', (req, res) => {
-    res.send('Hello,I am Aman.This is my project Expense Tracker ');
+    res.send('Hello,I am Aman ');
 });
 
 // Start the server
