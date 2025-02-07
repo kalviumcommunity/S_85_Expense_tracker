@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kalviumcommunity/S_85_Expense_tracker/issues"
   },
-  "homepage": "https://github.com/kalviumcommunity/S_85_Expense_tracker#readme"
+  "homepage": "https://github.com/kalviumcommunity/S_85_Expense_tracker#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
