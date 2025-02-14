@@ -6,8 +6,8 @@ const PORT = 3000;
 app.use(express.json());
 
 
-app.get('/', (req, res) => {
-    res.send('Hello,I am Aman.This is my project Expense Tracker');
+app.get('/ping', (req, res) => {
+    res.send('pong');
 });
 
 // Start the server
