@@ -43,7 +43,7 @@ app.get('/users', async (req, res) => {
 connectDB().then(()=>{
 // Start the server
 app.listen(PORT, () => {
-    console.log(`Mogoose connected`);
+    console.log(`Mongoose connected`);
     
     console.log(`Server is running on http://localhost:${PORT}`);
 })
