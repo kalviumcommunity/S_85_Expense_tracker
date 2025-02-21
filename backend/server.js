@@ -47,8 +47,8 @@ app.listen(PORT, () => {
     
     console.log(`Server is running on http://localhost:${PORT}`);
 })
-}).catch((err)=>{
-    console.error(`Not Mngoose connected${err}`);
+}).catch((error)=>{
+    console.error(`Not Mongoose connected${error}`);
     
 })
 
