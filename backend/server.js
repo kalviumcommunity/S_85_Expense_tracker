@@ -14,8 +14,6 @@ app.get('/', (req, res) => {
     res.send('Welcome to My Expense Tracker Project ');
 });
 
-// connect call
-connectDB();
 
 
 app.post('./users',async (req,res)=>{
@@ -25,7 +23,7 @@ app.post('./users',async (req,res)=>{
         res.status(201).json(user);
     }
     catch(err){
-res.status(400).json({error:error.message})
+        res.status(400).json({error:error.message})
     }
 })
 
@@ -41,17 +39,17 @@ app.get('/users', async (req, res) => {
 });
 
 
-
-
-
-
-
-
-
-
-
-
+// connect call
+connectDB().then(()=>{
 // Start the server
 app.listen(PORT, () => {
+    console.log(`Mogoose connected`);
+    
     console.log(`Server is running on http://localhost:${PORT}`);
-});
+})
+}).catch((err)=>{
+    console.error(`Not Mngoose connected${err}`);
+    
+})
+
+
