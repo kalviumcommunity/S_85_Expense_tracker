@@ -1,11 +1,8 @@
 import LandingPage from "./Loading";
+import "./index.css" // Ensure the path is correct
 
 function App() {
-  return (
-    <div>
-      <LandingPage />
-    </div>
-  );
+  return <LandingPage />;
 }
 
 export default App;
