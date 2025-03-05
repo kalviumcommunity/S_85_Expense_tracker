@@ -7,12 +7,12 @@ const userRouter=require('./Router/router')
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/ping', (req, res) => {
-    res.send('pong');
-});
-app.get('/', (req, res) => {
-    res.send('Welcome to My Expense Tracker Project ');
-});
+// app.get('/ping', (req, res) => {
+//     res.send('pong');
+// });
+// app.get('/', (req, res) => {
+//     res.send('Welcome to My Expense Tracker Project ');
+// });
 
 
 
