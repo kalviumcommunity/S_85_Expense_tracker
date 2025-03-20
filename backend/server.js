@@ -1,12 +1,13 @@
 const express = require('express');
-const app = express();
-const PORT = 3000;
 const connectDB=require('./db/connection');
 const User=require('./models/userModel');
 const userRouter=require('./Router/router')
+const cors=require('cors');
+const app = express();
+const PORT = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(cors());
 // app.get('/ping', (req, res) => {
 //     res.send('pong');
 // });
