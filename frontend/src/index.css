@@ -1,1 +1,32 @@
 @import "tailwindcss";
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .expense-title {
+    flex: 1;
+    font-size: 1.2em;
+    margin: 0;
+  }
+  
+  .expense-date {
+    flex: 1;
+    font-size: 0.9em;
+    color: #888;
+    text-align: center;
+  }
+  
+  .expense-amount {
+    flex: 1;
+    font-size: 1.2em;
+    color: #333;
+    text-align: right;
+  }
+  

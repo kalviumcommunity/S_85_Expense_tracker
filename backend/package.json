@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/kalviumcommunity/S_85_Expense_tracker#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.2",
     "mongoose": "^8.10.1",
     "nodemon": "^3.1.9"
