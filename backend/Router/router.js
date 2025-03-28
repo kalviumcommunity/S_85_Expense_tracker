@@ -3,7 +3,7 @@ const router = express.Router();
 const { handleGetAllUser, handlePost, handlePut, handlePatch, handleDelete } = require("../controllers/user");
 
 // Define CRUD routes
-router.route("/user")
+router.route("/form")
   .get(handleGetAllUser)  // GET all users
   .post(handlePost);  // Create new user
 

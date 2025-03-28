@@ -1,6 +1,7 @@
 import ExpenseItem from "./components/ExpenseItem";
 import LandingPage from "./Loading";
 import "./index.css";
+import Login from "./components/Login";
 import HomePage from "./components/Home";
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
       <div className="mt-10">
         {/* <ExpenseItem title="Groceries" amount="50" date="2025-03-17" /> */}
         {/* <ExpenseItem title="Transport" amount="90" date="2025-03-17" /> */}
-        <HomePage/>
+        {/* <HomePage/> */}
+        <Login/>
       </div>
     </div>
   );
