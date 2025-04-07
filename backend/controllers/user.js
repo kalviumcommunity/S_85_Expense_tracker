@@ -13,11 +13,49 @@ async function handleGetAllUser(req, res) {
 // Create a new user (POST)
 async function handlePost(req, res) {
   try {
-    const user = new User(req.body);
-    await user.save();
-    res.status(201).json(user);
+    const { name, email, password } = req.body;
+
+    const userExist = await User.findOne({ email });
+
+    if (userExist){
+      return res.status(400).json({ message: "User already exist" });
+  }
+
+    const newUser = await User.create({
+      name, email, password,
+    });
+    
+
+    res.status(201).json({ message: "User registered Successfully" ,
+      token:await newUser.generateToken(),
+      userId:newUser._id.toString(),
+    });
+  }
+
+  catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+}
+
+async function handleLogin(req,res) {
+  try {
+    const { email, password } = req.body;
+    const user = await User.findOne({email})
+
+    if(!user){
+    return  res.status(400).json({message:"User not found"})
+    }
+    const valid =await user.isPasswordValid(password);
+    if(!valid){
+      return res.status(401).json({message:"Invlaid Email or Password"});
+    }
+
+    res.status(200).json({mes:user,
+      token:await user.generateToken(),
+      userId:user._id.toString(),
+  })
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(500).json({ message: error.message });
   }
 }
 
@@ -74,5 +112,6 @@ module.exports = {
   handlePost,
   handlePut,
   handlePatch,
-  handleDelete
+  handleDelete,
+  handleLogin
 };
